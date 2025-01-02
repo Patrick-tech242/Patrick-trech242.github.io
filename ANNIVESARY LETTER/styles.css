@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    background: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 460px;
+}
+
+/* Envelope Styling */
+.envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f0e4d7;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+.flap-top, .flap-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #f0e4d7;
+    border-radius: 5px;
+    transition: transform 1s ease-in-out;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seal {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #9e2a2f, #d14f5f);
+    border-radius: 50%;
+}
+
+/* Photo Gallery Styling */
+.photo-gallery {
+    display: none;
+    flex-direction: column; /* Stack photos vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Removed the white background */
+    z-index: 10;
+    animation: fadeIn 1s forwards;
+}
+
+.text-container {
+    width: 100%;
+    text-align: center;
+    font-size: 2em; /* Increased font size */
+    margin-bottom: 30px; /* More space between text and photos */
+    color: #333; /* Text color */
+}
+
+.photos {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 25px; /* Increased space between images */
+    overflow-y: auto; /* Allow scrolling vertically if images exceed container height */
+}
+
+.photo {
+    width: 400px; /* Increased size */
+    height: 400px; /* Increased size */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    object-fit: cover;
+    image-rendering: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: scale(1.5); /* Adds hover effect */
+}
+
+
+.photo:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.photo:nth-child(2) {
+    animation-delay: 0.15s;
+}
+.photo:nth-child(3) {
+    animation-delay: 0.30s;
+}
+.photo:nth-child(4) {
+    animation-delay: 0.50s;
+}
+.photo:nth-child(5) {
+    animation-delay: 0.50s;
+}
+
+
+#continueButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #d14f5f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1.5s 1s forwards;
+}
+
+/* Message Styling */
+.message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.letter {
+    padding: 20px;
+    border: 5px solid #d4af37;
+    border-radius: 10px;
+    background: #f9f4e7;
+    font-family: 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
