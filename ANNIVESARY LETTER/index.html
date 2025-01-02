@@ -7,60 +7,87 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<div class="container">
+        <!-- Heart Shape -->
+        <div class="heart"></div>
+
     <div class="container">
+        <!-- Passcode Section -->
+        <div class="passcode-section" id="passcodeSection">
+            <h2>Enter To My World</h2>
+            <p class="instruction">Please enter a 6-digit passcode:</p> 
+            <div class="passcode-display" id="passcodeDisplay">----</div>
+            <div class="keypad">
+                <button onclick="enterNumber(0)">0</button>
+                <button onclick="enterNumber(1)">1</button>
+                <button onclick="enterNumber(2)">2</button>
+                <button onclick="enterNumber(3)">3</button>
+                <button onclick="enterNumber(4)">4</button>
+                <button onclick="enterNumber(5)">5</button>
+                <button onclick="enterNumber(6)">6</button>
+                <button onclick="enterNumber(7)">7</button>
+                <button onclick="enterNumber(8)">8</button>
+                <button onclick="enterNumber(9)">9</button>
+                <button onclick="clearPasscode()">-</button>
+                <button onclick="checkPasscode()">&#10004;</button>
+            </div>
+            <div class="passcode-message" id="passcodeMessage" style="display:none;">
+                <p>You've made it!</p>
+            </div>
+        </div>
+
         <!-- Envelope with Wax Seal -->
         <div class="envelope" id="envelope" onclick="openEnvelope()">
+            <p class="instruction">Click Me!</p> 
             <div class="flap-top"></div>
             <div class="flap-bottom"></div>
             <div class="front">
                 <div class="seal"></div>
             </div>
         </div>
+		
 
         <!-- Photo Gallery -->
         <div class="photo-gallery" id="photoGallery">
+            <div class="title"></div>
             <div class="photos" id="photos">
-			<h1> Core Memories </h1>
                 <img src="photo1.jpg" alt="Photo 1" class="photo">
                 <img src="photo2.jpg" alt="Photo 2" class="photo">
                 <img src="photo3.jpg" alt="Photo 3" class="photo">
-				<img src="photo4.jpg" alt="Photo 4" class="photo">
-				<img src="photo5.jpg" alt="Photo 5" class="photo">
-                <!-- Add more photos as needed -->
+                <img src="photo4.jpg" alt="Photo 4" class="photo">
+                <img src="photo5.jpg" alt="Photo 5" class="photo">
+                <img src="photo6.jpg" alt="Photo 6" class="photo">
+                <img src="photo7.jpg" alt="Photo 7" class="photo">
+                <img src="photo8.jpg" alt="Photo 8" class="photo">
+                <img src="photo9.jpg" alt="Photo 9" class="photo">
+                <img src="photo10.jpg" alt="Photo 10" class="photo">
+				<img src="photo11.jpg" alt="Photo 10" class="photo">
+				<img src="photo12.jpg" alt="Photo 10" class="photo">
+				<img src="photo13.jpg" alt="Photo 10" class="photo">
+				<img src="photo14.jpg" alt="Photo 10" class="photo">
+				<img src="photo15.jpg" alt="Photo 10" class="photo">
+				<img src="photo16.jpg" alt="Photo 10" class="photo">
+				<img src="photo17.jpg" alt="Photo 10" class="photo">
+				<img src="photo18.jpg" alt="Photo 10" class="photo">
+				<img src="photo19.jpg" alt="Photo 10" class="photo">
+				<img src="photo20.jpg" alt="Photo 10" class="photo">
             </div>
             <button id="continueButton" onclick="showMessage()">Continue</button>
         </div>
+		
+		 
 
         <!-- Anniversary Message -->
-        <div class="message" id="message">
-            <h1>Happy Anniversary!</h1>
-            <div class="letter">
-                <p>My dearest love,</p>
-                <p>To My Forever Love, Aubrey,
-Happy Anniversary, my love. One year ago, our story began—a story that has become the most precious part of my life. As I sit down to write this, I realize it has taken me months to put this letter together for you. I find myself lost in the countless memories we’ve created, the dreams we’ve shared, and the love that has grown so beautifully between us. A year may seem like a short time in the grand scheme of things, but with you, it feels like we’ve lived a lifetime of moments I wouldn’t trade for the world.
-Do you remember the first time we met at the bowling alley? I was just another face in the crowd, but you… you stood out like a beacon of light. Your beauty caught my attention—it was impossible not to notice you. And then, there was the day I saw you again at the bookstore. You were standing there, absorbed in the pages of a novel, and something inside me shifted. It was as if the universe whispered, Here she is—the one who will change everything.								
-From that moment, I couldn’t help but admire everything about you—especially the way you’d pick me up at school so we could go home together. Every time you waited for me, ensuring we could walk side by side, my appreciation for you grew deeper. It made me realize that there are still people like you in the world—people who genuinely care, who go out of their way to make others feel special. You weren’t just kind; you were extraordinary.
-At that moment, I felt like time stopped, and all I could do was marvel at you. But I kept my feelings to myself, secretly hoping that fate would bring us closer. Little did I know, that hope would blossom into the incredible journey we’ve shared this past year.
-Our story has been nothing short of magical, filled with moments that make my heart swell with gratitude. I think of those late-night conversations when we bared our souls to each other, weaving our dreams and fears into the fabric of us. I remember our spontaneous adventures—the kind that left us laughing until our stomachs ached and our cheeks hurt from smiling too much.
-But it’s not just the big moments that make our story so special. It’s the quiet ones too. The times we simply sat together in comfortable silence, where words weren’t needed because our hearts were speaking louder. It’s in those moments that I realized what love truly is—a connection so profound, it feels like home.
-Of course, no love story is without its challenges, and ours is no exception. We’ve faced moments that tested our patience, understanding, and commitment. There were times when the road wasn’t smooth, when life threw us challenges that felt insurmountable. But we faced them together, hand in hand. Those struggles didn’t break us; they strengthened us. They showed me that our love isn’t just about the good times—it’s about standing by each other when the world feels heavy.
-Thank you, Love, for never giving up on us. Thank you for your patience, for your effort, and for every little thing you do to make our love stronger. You’ve taught me what it means to love deeply and selflessly, and for that, I am forever grateful.
-You inspire me in ways I never thought possible. Your kindness, your resilience, and your unwavering support make me want to be the best version of myself. With you by my side, I feel like I can achieve anything. You’re not just my partner; you’re my muse, my confidant, and the greatest blessing I could ever ask for.
-As I look ahead, I’m filled with excitement for the chapters yet to come. I dream of all the milestones we’ll celebrate together—the trips we’ll take, the adventures we’ll embark on, and the dreams we’ll chase as a team. But more than anything, I dream of the simple moments: waking up next to you, holding your hand on a quiet afternoon, and sharing a lifetime of love and laughter.
-You are my safe place, my light in the darkness, and my reason to believe in the beauty of love. With every passing day, my love for you grows deeper, stronger, and more certain. You are my always, my forever, and my everything.
-Thank you for making this past year the most extraordinary chapter of my life. I can’t wait to see what the future holds for us, but one thing is certain: whatever comes our way, I’ll face it with you, because you are my home.
-Here’s to us, Aubrey—to the love we’ve built, the memories we’ve made, and the countless adventures still ahead. Happy Anniversary, my love. You will always have my heart.
-Forever and always,
-Patpat
-</p>
-                <p>With all my heart,</p>
-                <p>Your beloved</p>
-            </div>
-        </div>
+        <div id="message">
+    <div id="messageContent"></div>
+    <button id="backButton" onclick="goBack()">&#8592</button>
+    <button id="nextButton" onclick="nextPage()">Next</button>
+</div>
+
     </div>
 
     <!-- Audio File -->
-    <audio id="music" src="music.mp3" preload="auto"></audio>
+    <audio id="music" src="music.mp3.mp3" preload="auto"></audio>
 
     <script src="script.js"></script>
 </body>
