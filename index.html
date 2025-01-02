@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+        <!-- Heart Shape -->
+        <div class="heart"></div>
+
+    <div class="container">
+        <!-- Passcode Section -->
+        <div class="passcode-section" id="passcodeSection">
+            <h2>Enter To My World</h2>
+            <p class="instruction">Please enter a 6-digit passcode:</p> 
+            <div class="passcode-display" id="passcodeDisplay">----</div>
+            <div class="keypad">
+                <button onclick="enterNumber(0)">0</button>
+                <button onclick="enterNumber(1)">1</button>
+                <button onclick="enterNumber(2)">2</button>
+                <button onclick="enterNumber(3)">3</button>
+                <button onclick="enterNumber(4)">4</button>
+                <button onclick="enterNumber(5)">5</button>
+                <button onclick="enterNumber(6)">6</button>
+                <button onclick="enterNumber(7)">7</button>
+                <button onclick="enterNumber(8)">8</button>
+                <button onclick="enterNumber(9)">9</button>
+                <button onclick="clearPasscode()">-</button>
+                <button onclick="checkPasscode()">&#10004;</button>
+            </div>
+            <div class="passcode-message" id="passcodeMessage" style="display:none;">
+                <p>You've made it!</p>
+            </div>
+        </div>
+
+        <!-- Envelope with Wax Seal -->
+        <div class="envelope" id="envelope" onclick="openEnvelope()">
+            <p class="instruction">Click Me!</p> 
+            <div class="flap-top"></div>
+            <div class="flap-bottom"></div>
+            <div class="front">
+                <div class="seal"></div>
+            </div>
+        </div>
+		
+
+        <!-- Photo Gallery -->
+        <div class="photo-gallery" id="photoGallery">
+            <div class="title"></div>
+            <div class="photos" id="photos">
+                <img src="photo1.jpg" alt="Photo 1" class="photo">
+                <img src="photo2.jpg" alt="Photo 2" class="photo">
+                <img src="photo3.jpg" alt="Photo 3" class="photo">
+                <img src="photo4.jpg" alt="Photo 4" class="photo">
+                <img src="photo5.jpg" alt="Photo 5" class="photo">
+                <img src="photo6.jpg" alt="Photo 6" class="photo">
+                <img src="photo7.jpg" alt="Photo 7" class="photo">
+                <img src="photo8.jpg" alt="Photo 8" class="photo">
+                <img src="photo9.jpg" alt="Photo 9" class="photo">
+                <img src="photo10.jpg" alt="Photo 10" class="photo">
+				<img src="photo11.jpg" alt="Photo 10" class="photo">
+				<img src="photo12.jpg" alt="Photo 10" class="photo">
+				<img src="photo13.jpg" alt="Photo 10" class="photo">
+				<img src="photo14.jpg" alt="Photo 10" class="photo">
+				<img src="photo15.jpg" alt="Photo 10" class="photo">
+				<img src="photo16.jpg" alt="Photo 10" class="photo">
+				<img src="photo17.jpg" alt="Photo 10" class="photo">
+				<img src="photo18.jpg" alt="Photo 10" class="photo">
+				<img src="photo19.jpg" alt="Photo 10" class="photo">
+				<img src="photo20.jpg" alt="Photo 10" class="photo">
+            </div>
+            <button id="continueButton" onclick="showMessage()">Continue</button>
+        </div>
+		
+		 
+
+        <!-- Anniversary Message -->
+        <div id="message">
+    <div id="messageContent"></div>
+    <button id="backButton" onclick="goBack()">&#8592</button>
+    <button id="nextButton" onclick="nextPage()">Next</button>
+</div>
+
+    </div>
+
+    <!-- Audio File -->
+    <audio id="music" src="music.mp3.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
