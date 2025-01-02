@@ -13,12 +13,14 @@ body {
 
 .container {
     position: relative;
-    width: 750px;
-    height: 760px;
+    width: 100%; /* Ensure the container width adapts */
+    max-width: 750px; /* Set a max width for larger screens */
+    height: auto; /* Let height adjust according to content */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Padding for mobile */
 }
 
 /* Passcode Section Styling */
@@ -32,13 +34,14 @@ body {
 }
 
 .passcode-display {
-    font-size: 2em;
+    font-size: 1.5em; /* Adjust font size for mobile */
     margin: 20px;
     padding: 10px;
     background: #fff;
     border: 2px solid #d14f5f;
     border-radius: 10px;
-    width: 250px;
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 250px;
     text-align: center;
 }
 
@@ -48,48 +51,49 @@ body {
     gap: 10px;
     justify-items: center;
     margin-top: 20px;
-    width: 250px;
-    height: 350px;
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 250px;
+    height: auto;
     background: #f9f4e7;
     border: 3px solid #d14f5f;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center; /* Ensures buttons are centered horizontally */
 }
 
 .keypad button {
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 15px;
+    font-size: 1.2em; /* Smaller font size for mobile */
     background: #fff;
     border: 2px solid #d14f5f;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Adjust button size */
+    height: 50px;
 }
 
 .keypad button:hover {
     background: #fbe7ce;
     transform: scale(1.1);
 }
+
 #message {
     display: none;
     position: relative;
-    background: #f4f1e0; /* Light parchment color */
+    background: #f4f1e0;
     width: 80%;
     max-width: 700px;
     margin: 40px auto;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    font-family: 'Merriweather', serif; /* Elegant, vintage font */
-    color: #3e2a47; /* Dark vintage color */
+    font-family: 'Merriweather', serif;
+    color: #3e2a47;
     line-height: 1.6;
-    font-size: 5 em;
+    font-size: 1.2em; /* Adjust font size for mobile */
     text-align: justify;
-    background-image: url('parchment-texture.png'); /* Optional texture image */
+    background-image: url('parchment-texture.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,17 +101,17 @@ body {
 }
 
 #messageContent {
-    font-size: 1.2em; /* Increase the font size */
-    font-family: 'Georgia', serif; /* Vintage-style font */
-    line-height: 1.6; /* Improve line spacing */
-    color: #4b2c20; /* Dark brown color for a vintage feel */
+    font-size: 1.2em;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #4b2c20;
     padding: 20px;
     text-align: center;
-    transition: font-size 0.3s ease; /* Smooth transition when text changes */
+    transition: font-size 0.3s ease;
 }
 
 #backButton, #nextButton {
-    font-family: 'Lobster', cursive; /* A touch of calligraphy-style font */
+    font-family: 'Lobster', cursive;
     background: #fcd7e2;
     color: #d14f5f;
     border: none;
@@ -132,34 +136,18 @@ body {
     float: right;
 }
 
-h1, h2 {
-    font-family: 'Dancing Script', cursive; /* Adds a flowing calligraphy style */
-    text-align: center;
-    font-size: 2em;
-    color: #d14f5f;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* Envelope Styling */
 .envelope {
     position: absolute;
-    width: 400px;
-    height: 300px;
+    width: 300px; /* Adjust width for mobile */
+    height: 200px; /* Adjust height for mobile */
     background: linear-gradient(145deg, #fbd3e9, #fbe7ce);
     border-radius: 25px;
     cursor: pointer;
     transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transform: scale(0); /* Initially hidden with scale down */
+    transform: scale(0);
 }
 
 .envelope::before,
@@ -217,67 +205,16 @@ h1, h2 {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 80%; /* Reduced width to make it look like a TV screen */
-    height: 80%; /* Reduced height */
-    background: #000; /* Black background to mimic a TV screen */
+    width: 95%; /* Increased width for mobile */
+    height: 95%; /* Increased height for mobile */
+    background: #000;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Adds a nice shadow around the screen */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     z-index: 10;
     animation: fadeIn 1s forwards;
     padding: 20px;
     overflow: hidden;
-    border: 10px solid #fff; /* White border to mimic a TV frame */
-}
-
-/* Photo Container (screen effect) */
-.photos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-/* Image Styling */
-.photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Active Image */
-.photo.active {
-    opacity: 1;
-}
-
-/* Add a glow effect around the photo (TV screen look) */
-.photo-gallery:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: rgba(255, 255, 255, 0.2); /* Light glow effect */
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
-}
-
-/* Hover effect for photos (TV screen feeling) */
-.photo:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+    border: 10px solid #fff;
 }
 
 /* Slideshow navigation (TV remote-like buttons) */
@@ -286,7 +223,7 @@ h1, h2 {
     bottom: 20px;
     right: 30px;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1em; /* Adjust font size for mobile */
     background: #d14f5f;
     color: #fff;
     border: none;
@@ -301,28 +238,37 @@ h1, h2 {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-    .photo-gallery {
-        width: 95%;
-        height: 95%;
-        border-radius: 15px;
-        border: 8px solid #fff; /* Slightly smaller frame on smaller screens */
+    .container {
+        width: 100%;
+        padding: 10px;
     }
 
-    .photo {
-        width: 90%;
+    .keypad {
+        width: 100%;
         height: auto;
+        padding: 5px;
     }
-}
 
+    .keypad button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
+    .passcode-display {
+        font-size: 1.5em;
+        width: 80%;
+    }
+
+    .photo-gallery {
+        width: 100%;
+        height: 100%;
+    }
 
     #continueButton {
-        margin-top: 30px;
-        font-size: 0.9em;
+        margin-top: 20px;
+        font-size: 1.1em;
     }
-	#backButton, #nextButton {
-    display: none;
 }
-}
-#backButton, #nextButton {
-    display: none;
-}
+
