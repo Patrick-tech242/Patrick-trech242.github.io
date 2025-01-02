@@ -199,22 +199,56 @@ body {
 }
 
 /* Photo Gallery Styling */
+/* Photo Gallery Styling */
 .photo-gallery {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 95%; /* Increased width for mobile */
-    height: 95%; /* Increased height for mobile */
+    width: 100%; /* Full width */
+    height: 90vh; /* Full height of viewport but not exceeding the screen */
     background: #000;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     z-index: 10;
     animation: fadeIn 1s forwards;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
-    border: 10px solid #fff;
+    border: 10px solid #fff; /* White border */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall dimensions */
+}
+
+/* Photo Container (screen effect) */
+.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.photo {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure it covers the space but maintains aspect ratio */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Active Image */
+.photo.active {
+    opacity: 1;
 }
 
 /* Slideshow navigation (TV remote-like buttons) */
@@ -222,18 +256,39 @@ body {
     position: absolute;
     bottom: 20px;
     right: 30px;
-    padding: 10px 20px;
-    font-size: 1em; /* Adjust font size for mobile */
+    padding: 12px 24px;
+    font-size: 1.2em;
     background: #d14f5f;
     color: #fff;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
+    z-index: 100;
 }
 
 #continueButton:hover {
     background: #a13e54;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .photo-gallery {
+        width: 100%;
+        height: 90vh;
+        padding: 5px; /* Reduced padding for mobile */
+        border: 8px solid #fff; /* Slightly smaller border */
+    }
+
+    .photo {
+        width: 100%;
+        height: auto; /* Adjust image height to maintain aspect ratio */
+    }
+
+    #continueButton {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
 }
 
 /* Responsive Styling */
@@ -271,4 +326,5 @@ body {
         font-size: 1.1em;
     }
 }
+
 
