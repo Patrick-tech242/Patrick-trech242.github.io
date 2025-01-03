@@ -1,3 +1,4 @@
+
 /* General Styling */
 body {
     background: #fcd7e2;
@@ -13,14 +14,12 @@ body {
 
 .container {
     position: relative;
-    width: 100%; /* Ensure the container width adapts */
-    max-width: 750px; /* Set a max width for larger screens */
-    height: auto; /* Let height adjust according to content */
+    width: 750px;
+    height: 760px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Padding for mobile */
 }
 
 /* Passcode Section Styling */
@@ -34,14 +33,13 @@ body {
 }
 
 .passcode-display {
-    font-size: 1.5em; /* Adjust font size for mobile */
+    font-size: 2em;
     margin: 20px;
     padding: 10px;
     background: #fff;
     border: 2px solid #d14f5f;
     border-radius: 10px;
-    width: 80%; /* Adjust width for smaller screens */
-    max-width: 250px;
+    width: 250px;
     text-align: center;
 }
 
@@ -51,49 +49,48 @@ body {
     gap: 10px;
     justify-items: center;
     margin-top: 20px;
-    width: 80%; /* Adjust width for smaller screens */
-    max-width: 250px;
-    height: auto;
+    width: 250px;
+    height: 350px;
     background: #f9f4e7;
     border: 3px solid #d14f5f;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center; /* Ensures buttons are centered horizontally */
 }
 
 .keypad button {
-    padding: 15px;
-    font-size: 1.2em; /* Smaller font size for mobile */
+    padding: 20px;
+    font-size: 1.5em;
     background: #fff;
     border: 2px solid #d14f5f;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    width: 50px; /* Adjust button size */
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .keypad button:hover {
     background: #fbe7ce;
     transform: scale(1.1);
 }
-
 #message {
     display: none;
     position: relative;
-    background: #f4f1e0;
+    background: #f4f1e0; /* Light parchment color */
     width: 80%;
     max-width: 700px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    font-family: 'Merriweather', serif;
-    color: #3e2a47;
+    font-family: 'Merriweather', serif; /* Elegant, vintage font */
+    color: #3e2a47; /* Dark vintage color */
     line-height: 1.6;
-    font-size: 1.2em; /* Adjust font size for mobile */
+    font-size: 5 em;
     text-align: justify;
-    background-image: url('parchment-texture.png');
+    background-image: url('parchment-texture.png'); /* Optional texture image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,17 +98,17 @@ body {
 }
 
 #messageContent {
-    font-size: 1.2em;
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    color: #4b2c20;
+    font-size: 1.2em; /* Increase the font size */
+    font-family: 'Georgia', serif; /* Vintage-style font */
+    line-height: 1.6; /* Improve line spacing */
+    color: #4b2c20; /* Dark brown color for a vintage feel */
     padding: 20px;
     text-align: center;
-    transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease; /* Smooth transition when text changes */
 }
 
 #backButton, #nextButton {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive; /* A touch of calligraphy-style font */
     background: #fcd7e2;
     color: #d14f5f;
     border: none;
@@ -136,18 +133,34 @@ body {
     float: right;
 }
 
+h1, h2 {
+    font-family: 'Dancing Script', cursive; /* Adds a flowing calligraphy style */
+    text-align: center;
+    font-size: 2em;
+    color: #d14f5f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Envelope Styling */
 .envelope {
     position: absolute;
-    width: 300px; /* Adjust width for mobile */
-    height: 200px; /* Adjust height for mobile */
+    width: 400px;
+    height: 300px;
     background: linear-gradient(145deg, #fbd3e9, #fbe7ce);
     border-radius: 25px;
     cursor: pointer;
     transition: transform 1s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transform: scale(0);
+    transform: scale(0); /* Initially hidden with scale down */
 }
 
 .envelope::before,
@@ -199,24 +212,22 @@ body {
 }
 
 /* Photo Gallery Styling */
-/* Photo Gallery Styling */
 .photo-gallery {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%; /* Full width */
-    height: 90vh; /* Full height of viewport but not exceeding the screen */
-    background: #000;
+    width: 80%; /* Reduced width to make it look like a TV screen */
+    height: 80%; /* Reduced height */
+    background: #000; /* Black background to mimic a TV screen */
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Adds a nice shadow around the screen */
     z-index: 10;
     animation: fadeIn 1s forwards;
-    padding: 10px;
+    padding: 20px;
     overflow: hidden;
-    border: 10px solid #fff; /* White border */
-    box-sizing: border-box; /* Ensures padding doesn't affect the overall dimensions */
+    border: 10px solid #fff; /* White border to mimic a TV frame */
 }
 
 /* Photo Container (screen effect) */
@@ -234,9 +245,9 @@ body {
 
 /* Image Styling */
 .photo {
-    width: 100%; /* Ensure the image takes full width */
-    height: auto; /* Maintain the aspect ratio */
-    object-fit: cover; /* Ensure it covers the space but maintains aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     opacity: 0;
     transition: opacity 1s ease;
@@ -251,12 +262,31 @@ body {
     opacity: 1;
 }
 
+/* Add a glow effect around the photo (TV screen look) */
+.photo-gallery:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(255, 255, 255, 0.2); /* Light glow effect */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+/* Hover effect for photos (TV screen feeling) */
+.photo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 /* Slideshow navigation (TV remote-like buttons) */
 #continueButton {
     position: absolute;
     bottom: 20px;
     right: 30px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 1.2em;
     background: #d14f5f;
     color: #fff;
@@ -264,67 +294,44 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
-    z-index: 100;
 }
 
 #continueButton:hover {
     background: #a13e54;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
+/* Responsive Styling */
+@media (max-width: 414px) {
     .photo-gallery {
-        width: 100%;
-        height: 90vh;
-        padding: 5px; /* Reduced padding for mobile */
-        border: 8px solid #fff; /* Slightly smaller border */
+        width: 95%;
+        height: 95%;
+        border-radius: 15px;
+        border: 8px solid #fff;
+		visibility: collapse;/* Slightly smaller frame on smaller screens */
     }
 
     .photo {
-        width: 100%;
-        height: auto; /* Adjust image height to maintain aspect ratio */
-    }
-
-    #continueButton {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .keypad {
-        width: 100%;
+        width: 90%;
         height: auto;
-        padding: 5px;
-    }
-
-    .keypad button {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2em;
-        padding: 12px;
-    }
-
-    .passcode-display {
-        font-size: 1.5em;
-        width: 80%;
-    }
-
-    .photo-gallery {
-        width: 100%;
-        height: 100%;
-    }
-
-    #continueButton {
-        margin-top: 20px;
-        font-size: 1.1em;
     }
 }
 
+@media only screen and (max-width: 414px){
+		.photo{
+			visibility:collapse;
+		}
+		
+}
 
+
+    #continueButton {
+        margin-top: 30px;
+        font-size: 0.9em;
+    }
+	#backButton, #nextButton {
+    display: none;
+}
+}
+#backButton, #nextButton {
+    display: none;
+}
